@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+{{-- <x-app-layout>
+    
+</x-app-layout> --}}
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -29,8 +33,8 @@
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @if (Route::has('Registrar'))
+                            <a href="{{ route('Registrar') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                         @endif
                     @endif
                 </div>
@@ -129,4 +133,4 @@
             </div>
         </div>
     </body>
-</html>
+</html> --}}

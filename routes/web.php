@@ -13,10 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+    return view('home');
+})->name('Inicio');
+
+Route::view('/register', 'auth/register')->name('Registrar');
+
+Route::view('/accountstate', 'app/accountstate')->name('Estado de Cuenta');
+Route::view('/receipt', 'app/receipt')->name('Recibos');
+Route::view('/payment', 'app/payment')->name('Pagos');
+Route::view('/reserve', 'app/reserve')->name('Reservar');
+Route::view('/billboard', 'app/billboard')->name('Cartelera');

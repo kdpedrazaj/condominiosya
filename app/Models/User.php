@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'card_ident', 'email', 'password',
     ];
 
     /**
@@ -57,4 +57,22 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    // Relacion Muchos a Muchos
+    public function profiles()
+    {
+        return $this->belongsToMany('App\Models\Profile');
+    }
+
+    // Relacion Muchos a Muchos
+    public function aparments()
+    {
+        return $this->belongsToMany('App\Models\Apartment');
+    }
+
+    //Relacion Uno a Uno
+    public function reserves()
+    {
+        return $this->hasOne('App\Models\Reserve');
+    }
 }
